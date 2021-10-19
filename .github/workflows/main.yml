@@ -16,18 +16,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Install dependencies
-        run: |
-          sudo apt-get install libcurl4-openssl-dev
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@master
       - uses: r-lib/actions/setup-r@master
 
       - name: Install packages
         run: |
-          R -e 'install.packages("rtweet")'
-          R -e 'install.packages("magrittr")'
-          R -e 'install.packages("readr")'
+          R -e 'install.packages("rvest")'
       
       - name: Scrape
         run: Rscript scrape.R
