@@ -18,7 +18,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@master
-      - uses: r-lib/actions/setwo-r@maser
+      - uses: r-lib/actions/setup-r@master
 
       - name: Install packages
         run: |
